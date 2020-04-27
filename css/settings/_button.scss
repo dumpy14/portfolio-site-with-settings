@@ -1,0 +1,25 @@
+.buttons--rc {
+  .btn,
+  .section__subtitle--intro,
+  .section__subtitle--about {
+    --br: 6px;
+  }
+}
+
+.buttons--rd {
+  .btn,
+  .section__subtitle--intro,
+  .section__subtitle--about {
+    --br: 15rem;
+  }
+}
+
+.buttons--grd {
+  .btn {
+    background-image: linear-gradient(to right, var(--clr-accent-clmp), var(--clr-accent));
+
+    &:hover {
+      background-image: linear-gradient(to right, var(--clr-accent), var(--clr-accent-clmp));
+    }
+  }
+}

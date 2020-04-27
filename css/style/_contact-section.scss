@@ -1,0 +1,50 @@
+/* contact */
+
+.contact-me {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 5em 0;
+}
+
+.section__title--contact {
+  color: var(--clr-accent);
+  position: relative;
+  text-align: center;
+}
+
+@supports (display: grid) {
+  @media (min-width: 50em) {
+      .contact-me form {
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-column-gap: 1em;
+
+          grid-template-areas: 
+              "name     email"
+              "message message"
+              "   .      button";
+      }
+
+      .contact-me form .name {
+          grid-area: name;
+      }
+
+      .contact-me form .email {
+          grid-area: email;
+      }
+
+      .contact-me form .message {
+          grid-area: message;
+      }
+
+      .contact-me form .message textarea {
+          height: 10em;
+      }
+
+      .contact-me form .button {
+          grid-area: button;
+      }
+  }
+}

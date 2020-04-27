@@ -1,0 +1,29 @@
+.form--rc {
+  input,
+  textarea {
+    --br: 6px;
+  }
+}
+
+.form--rd {
+  input {
+    --br: 15rem;
+  }
+  textarea {
+    --br: 2.5rem;
+  }
+}
+
+.form--material {
+  input,
+  textarea {
+    border: none;
+    border-bottom: solid 2px var(--input-bc);
+
+    &:focus {
+      box-shadow: none;
+      background-color: var(--clr-accent-fade);
+      border-bottom-color: var(--clr-accent);
+    }
+  }
+}

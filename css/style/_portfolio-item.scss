@@ -1,0 +1,101 @@
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual h2 {
+  margin-bottom: 0.8em;
+}
+
+.portfolio-item-individual h3 {
+  margin: 1em 0;
+}
+
+.portfolio-item-individual p {
+  margin: 0 0 1em;
+}
+
+.portfolio-item-individual a,
+.portfolio-item-individual a:hover,
+.portfolio-item-individual a:focus {
+  text-decoration: none;
+}
+
+.portfolio-item-individual ul,.portfolio-item-individual ol {
+  line-height: 1.65;
+  margin-bottom: 1em;
+  padding-left: 0;
+  list-style: none;
+}
+
+.portfolio-item-individual ul li,
+.portfolio-item-individual ol li {
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+
+.portfolio-item-individual ul li:before,
+.portfolio-item-individual ol li:before {
+  color: var(--clr-accent);
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
+  width: 1em
+}
+
+.portfolio-item-individual ul li {
+  padding-left: 1.5em
+}
+
+.portfolio-item-individual ul li:before {
+  content: '\2022';
+  font-size: 1.5em;
+  margin-left: -1em
+}
+
+.portfolio-item-individual ol {
+  counter-reset: li
+}
+
+.portfolio-item-individual ol li {
+  padding-left: 1.7em;
+  position: relative
+}
+
+.portfolio-item-individual ol li:before {
+  content: "." counter(li);
+  counter-increment: li;
+  font-size: 1.2em;
+  text-align: right;
+  direction: rtl;
+  position: absolute;
+  top: 4px;
+  left: 0
+}
+
+.portfolio-item-individual blockquote {
+  margin: 1em 0;
+}
+
+.portfolio-item-individual blockquote p {
+  margin-bottom: 0;
+}
+
+.portfolio-item-individual figure {
+  margin: 1em 0;
+}
+
+.portfolio-item-individual figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-item-individual .important {
+  background-color: var(--clr-accent-fade);
+  border: solid 1px var(--clr-accent);
+  padding: 1.2em;
+}

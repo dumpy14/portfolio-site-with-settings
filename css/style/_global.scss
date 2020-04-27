@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties, update these for your own design */
+
+:root {
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'PT Sans', sans-serif;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+
+    --clr-accent: #f44336;
+    --clr-accent-clmp: #b71c1c;
+    --clr-accent-fade: #ffe9ea;
+    --clr-accent-text: #fff;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+
+    --clr-filter: rgba(0, 0, 0, .5);
+
+    --br: 0;
+
+    --input-bc: #ccc;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+/* endable this to add smooth scrolling */
+/* html {
+    scroll-behavior: smooth;
+} */
+
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: var(--fw-bold)
+}
+
+:focus {
+    outline: none;
+    box-shadow: 0 0 0.25em var(--clr-accent);
+}
+
+/* form */
+
+form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    color: var(--clr-dark);
+}
+
+input,
+textarea {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    padding: .50em;
+    width: 100%;
+    min-width: 15em;
+    background: #fff;
+    border: 1px solid var(--input-bc);
+    font-size: 1.2rem;
+    border-radius: var(--br);
+}
+
+textarea {
+    resize: vertical;
+    outline: none;
+}
+
+form .btn {
+    margin-top: 1em;
+    margin-left: auto;
+    max-width: 100px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .8em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-accent-text);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    border-radius: var(--br);
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}

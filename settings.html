@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevJane Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+    <body class="typography--three">
+        <header>
+            <div class="logo">
+                {dev<span class="logo__accent">john</span>}
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact me</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Change <strong>site settings</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Change site style and colors</p>
+            <img src="img/settings-01.jpg" alt="" class="intro__img">
+        </section>
+        
+        <div class="settings">
+            <form id="settings" action="">
+              <div class="settings__row">
+                <h4 class="settings__title">Colors</h4>
+                <div class="options">
+                  <label>
+                    <input type="radio" name="color" value="color--one">
+                    <span class="options__color color--one" checked>Color 1</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="color" value="color--two">
+                    <span class="options__color color--two">Color 2</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="color" value="color--three">
+                    <span class="options__color color--three">Color 3</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="color" value="color--four">
+                    <span class="options__color color--four">Color 4</span>
+                  </label>
+                </div>
+              </div> <!-- colors -->
+
+              <div class="settings__row">
+                <h4 class="settings__title">Fonts</h4>
+                <div class="options">
+                  <label>
+                    <input type="radio" name="font" value="fonts--one">
+                    <span class="options__fonts fonts--one" checked>
+                      <span class="fonts__title">Lorem Title</span>
+                      <span class="fonts__body">Lorem Content</span>
+                    </span>
+                  </label>
+                  <label>
+                    <input type="radio" name="font" value="fonts--two">
+                    <span class="options__fonts fonts--two">
+                      <span class="fonts__title">Lorem Title</span>
+                      <span class="fonts__body">Lorem Content</span>
+                    </span>
+                  </label>
+                  <label>
+                    <input type="radio" name="font" value="fonts--three">
+                    <span class="options__fonts fonts--three">
+                      <span class="fonts__title">Lorem Title</span>
+                      <span class="fonts__body">Lorem Content</span>
+                    </span>
+                  </label>
+                  <label>
+                    <input type="radio" name="font" value="fonts--four">
+                    <span class="options__fonts fonts--four">
+                      <span class="fonts__title">Lorem Title</span>
+                      <span class="fonts__body">Lorem Content</span>
+                    </span>
+                  </label>
+                  <label>
+                    <input type="radio" name="font" value="fonts--five">
+                    <span class="options__fonts fonts--five">
+                      <span class="fonts__title">Lorem Title</span>
+                      <span class="fonts__body">Lorem Content</span>
+                    </span>
+                  </label>                  
+                </div>
+              </div> <!-- fonts -->
+
+              <div class="settings__row">
+                <h4 class="settings__title">Buttons</h4>
+                <div class="options">
+                  <label>
+                    <input type="radio" name="button" value="buttons--r">
+                    <span class="options__button buttons--r">Button</span> 
+                  </label>
+                  <label>
+                    <input type="radio" name="button" value="buttons--rc">
+                    <span class="options__button buttons--rc">Button</span> 
+                  </label>
+                  <label>
+                    <input type="radio" name="button" value="buttons--rd">
+                    <span class="options__button buttons--rd">Button</span> 
+                  </label>
+                </div>
+              </div> <!-- buttons -->
+
+              <div class="settings__row">
+                <h4 class="settings__title">Gradient Buttons</h4>
+                <label>
+                  <input type="checkbox" name="gradientButton" value="buttons--grd">
+                  <span class="options__button-gradient">Yes</span> 
+                </label>
+              </div> <!-- gradient buttons -->
+
+              <div class="settings__row">
+                <h4 class="settings__title">Form Control</h4>
+                <div class="options">
+                  <label>
+                    <input type="radio" name="formControl" value="form--r">
+                    <span class="options__form form--r"></span> 
+                  </label>
+                  <label>
+                    <input type="radio" name="formControl" value="form--rc">
+                    <span class="options__form form--rc"></span> 
+                  </label>
+                  <label>
+                    <input type="radio" name="formControl" value="form--rd">
+                    <span class="options__form form--rd"></span> 
+                  </label>
+                  <label>
+                    <input type="radio" name="formControl" value="form--material">
+                    <span class="options__form form--material"></span> 
+                  </label>
+                </div>
+              </div> <!-- form controls -->
+              
+              <div class="settings__row">
+                <h4 class="settings__title">Typography</h4>
+                <div class="options">
+                  <label>
+                    <input type="radio" name="typography" value="typography--one">
+                    <span class="options__typography" checked>
+                      Option One
+                    </span>
+                  </label>
+                  <label>
+                    <input type="radio" name="typography" value="typography--two">
+                    <span class="options__typography">
+                      Option Two
+                    </span>
+                  </label>
+                  <label>
+                    <input type="radio" name="typography" value="typography--three">
+                    <span class="options__typography">
+                      Option Three
+                    </span>
+                  </label>
+                </div>
+              </div> <!-- typography -->              
+            </form>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:hello@john.dev" class="footer__link">hello@john.dev</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="http://dribbble.com">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <a href="settings.html" class="footer__link footer__settings"><i class="fas fa-cog"></i> Change Site Settings</a>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        <script src="js/settings.js"></script>
+        
+    </body>
+</html>

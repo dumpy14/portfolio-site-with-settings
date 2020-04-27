@@ -1,0 +1,265 @@
+@function funcheadings($from:1, $to:6) {
+  @if $from == $to {
+      @return 'h#{$from}';
+  } @else {
+      @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+//https://jsfiddle.net/jitendravyas/cxJtc/
+@mixin headings($from: 1, $to: 6){
+  @for $i from $from through $to{
+    h#{$i}{
+      @content
+    }
+  }
+}
+
+@mixin headingswithfontsize($from: 1, $to: 6, $scale: 0.25){
+  @for $i from $from through $to{
+    h#{$i}{
+      font-size: (1 + $scale * (6 - $i)) + rem;
+      @content
+    }
+  }
+}
+
+//End - Helpers
+
+.typography--one {
+
+  .portfolio-item-individual {
+
+    //headings
+    @include headings() {
+      padding-bottom: 0.6em;
+      position: relative;
+      
+      &::after {
+        content: '';
+        background-color: var(--clr-accent);
+        width: 3em;
+        height: 0.15em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    a {
+      background-color: var(--clr-accent-fade);
+      color: var(--clr-accent);
+      padding: .15em .25em;
+
+      &:hover {
+        color: var(--clr-accent-clmp);
+      }
+    }
+
+    blockquote {
+      position: relative;
+      padding: 1em;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 2.5em;
+        height: 2.5em;
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+        border-top: solid 2px var(--clr-accent);
+        border-left: solid 2px var(--clr-accent);
+      }
+
+      &::after {
+        bottom: 0;
+        right: 0;
+        border-bottom: solid 2px var(--clr-accent);
+        border-right: solid 2px var(--clr-accent);
+      }
+    }
+
+    figure {
+      box-shadow: var(--bs);
+    }
+
+    figcaption {
+      padding: 1.5em;
+      text-align: center;
+    }
+
+  }
+
+}
+
+.typography--two {
+  
+  .portfolio-item-individual {
+
+    //headings
+    @include headings() {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      
+      &::before,
+      &::after {
+        content: '';
+        background-color: var(--clr-accent);
+        height: 0.15em;
+        flex: 0 1 2em;
+      }
+      &::before {
+        margin-right: 0.6em;
+      }
+      &::after {
+        margin-left: 0.6em;
+      }
+    }
+
+    a {
+      color: var(--clr-accent);
+      border-bottom: dotted 2px var(--clr-accent-clmp);
+      padding-bottom: .10em;
+
+      &:hover {
+        color: var(--clr-accent-clmp);
+      }
+    }
+
+    ul {
+      li{
+        &:before {
+          content: '\25A0';
+          vertical-align: top;
+        }
+      }
+    }
+
+    blockquote {
+      position: relative;
+      padding: 1em;
+      text-align: center;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5em;
+        height: 0.2em;
+        background-color: var(--clr-accent);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    figure {
+      position: relative;
+    }
+
+    figcaption {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 1.1em;
+      width: 100%;
+      background-color: var(--clr-accent-clmp);
+      color: var(--clr-accent-text);
+      opacity: 0.75;
+    }
+
+    .important {
+      border-style: dotted;
+    }
+  }
+  
+}
+
+.typography--three {
+  
+  .portfolio-item-individual {
+    
+    //headings
+    @include headings() {
+      display: flex;
+      position: relative;
+      align-items: center;
+      
+      &::before,
+      &::after {
+        content: '';
+        background-color: var(--clr-accent);
+        width: 0.25em;
+        height: 1em;
+        transform: skew(-20deg);
+      }
+      &::before {
+        margin-right: 0.6em;
+      }
+      &::after {
+        margin-left: 0.6em;
+      }
+    }
+
+    a {
+      color: var(--clr-accent);
+      border: dashed 1px var(--clr-accent-clmp);
+      padding: .15em .25em;
+
+      &:hover {
+        background-color: var(--clr-accent-fade);
+        color: var(--clr-accent-clmp);
+      }
+    }
+
+    ul {
+      li{
+        &:before {
+          content: '\203a';
+          vertical-align: top;
+        }
+      }
+    }
+
+    blockquote {
+      padding: 1em;
+      border: solid 1px var(--input-bc);
+      border-left: solid 3px var(--clr-accent);
+    }
+
+    figure {
+      position: relative;
+    }
+
+    figcaption {
+      position: absolute;
+      left: 0;
+      bottom: 2em;
+      padding: 1em;
+      width: 50%;
+      background-color: var(--clr-accent-clmp);
+      color: var(--clr-accent-text);
+      opacity: 0.8;
+    }
+
+    .important {
+      border-style: dashed;
+    }
+
+  }
+
+}
